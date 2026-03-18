@@ -98,7 +98,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="w-full px-8 pt-0 pb-10">
+    <section className="w-full px-8 pt-16 pb-10">
       {/* Title + Search */}
       <div className="max-w-[746px] mx-auto text-center mb-8">
         <h1 className="text-[#00194c] text-[56px] font-bold leading-tight mb-5">
