@@ -1,12 +1,16 @@
+import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+
 const logoSrc = "http://localhost:3845/assets/1dadfaa94ab6e3472c340b8e6b5a3cc3378243e7.png";
-const imgIconFacebook = "http://localhost:3845/assets/0465d34fd7fceb5f3500d437d904992a580e5dd7.svg";
-const imgIconTwitter = "http://localhost:3845/assets/3b3f3a40b4c438e81fc748996ba4411c9067966d.svg";
-const imgIconInstagram = "http://localhost:3845/assets/6347f0ceb52515685f762ffad302cefeb2f1f24d.svg";
-const imgIconYoutube = "http://localhost:3845/assets/2cdb6aceefc3dda21c915e310ef45cbdb35b9220.svg";
 
 const exploreLinks = ["Read Stories", "Featured Testimonies", "By Topic", "By Location"];
 const shareLinks = ["Share Your Story", "Create Account", "Guidelines"];
-const socialIcons = [imgIconFacebook, imgIconTwitter, imgIconInstagram, imgIconYoutube];
+
+const socialLinks = [
+  { Icon: Facebook, label: "Facebook" },
+  { Icon: Twitter, label: "Twitter" },
+  { Icon: Instagram, label: "Instagram" },
+  { Icon: Youtube, label: "YouTube" },
+];
 
 export default function Footer() {
   return (
@@ -52,13 +56,14 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h4 className="text-white text-xl font-medium">Connect</h4>
           <div className="flex gap-4">
-            {socialIcons.map((icon, i) => (
+            {socialLinks.map(({ Icon, label }) => (
               <a
-                key={i}
+                key={label}
                 href="#"
+                aria-label={label}
                 className="bg-white/10 rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition-colors"
               >
-                <img alt="Social" className="w-5 h-5" src={icon} />
+                <Icon size={18} className="text-white" />
               </a>
             ))}
           </div>

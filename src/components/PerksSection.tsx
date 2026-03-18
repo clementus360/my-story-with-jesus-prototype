@@ -1,34 +1,42 @@
-const imgIconMapPin = "http://localhost:3845/assets/5539956cba384d17f0defbd9599fd710aa02490c.svg";
-const imgIconQR = "http://localhost:3845/assets/75dd3f0571c230842aafb27b707d33642b21d925.svg";
-const imgIconStopwatch = "http://localhost:3845/assets/c5c6578242c4453d0d54f12128643f67567c773c.svg";
+"use client";
+
+import { MapPin, QrCode, Timer } from "lucide-react";
+import { useInView } from "@/hooks/useInView";
 
 const perks = [
   {
-    icon: imgIconMapPin,
+    Icon: MapPin,
     title: "Geographic Tracking",
     description: "City, state, and country-level insights",
   },
   {
-    icon: imgIconQR,
+    Icon: QrCode,
     title: "Scan Totals",
     description: "Total versus unique scans to gauge interest",
   },
   {
-    icon: imgIconStopwatch,
+    Icon: Timer,
     title: "Time-Based Trends",
     description: "Peak activity by hour, day, or week",
   },
 ];
 
 export default function PerksSection() {
+  const { ref, inView } = useInView(0.2);
+
   return (
     <section className="w-full px-20 py-16">
-      <div className="max-w-[1280px] mx-auto flex items-center justify-between">
+      <div ref={ref} className="max-w-[1280px] mx-auto flex items-center justify-between">
         {perks.map((perk, index) => (
           <div key={perk.title} className="flex items-center gap-0">
-            <div className="w-[320px] flex flex-col items-center gap-4 text-center">
-              <div className="bg-[#3949ab] border border-white rounded-full p-4 backdrop-blur-md">
-                <img alt={perk.title} className="w-6 h-6" src={perk.icon} />
+            <div
+              className={`w-[320px] flex flex-col items-center gap-4 text-center transition-all duration-700 ease-out ${
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+              }`}
+              style={{ transitionDelay: `${index * 120}ms` }}
+            >
+              <div className="bg-[#3949ab] rounded-full p-4">
+                <perk.Icon size={24} className="text-white" />
               </div>
               <h3 className="text-[#00194c] text-2xl font-medium">{perk.title}</h3>
               <p className="text-[#666] text-base leading-5">{perk.description}</p>
