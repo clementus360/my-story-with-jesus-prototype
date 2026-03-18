@@ -4,7 +4,7 @@ import { TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
 
-const imgGroupPhoto = "http://localhost:3845/assets/2c8af520db8b2da2b9bf74c429690d48178e41c0.png";
+const imgGroupPhoto = "/assets/2c8af520db8b2da2b9bf74c429690d48178e41c0.png";
 
 function useCountUp(target: number, duration: number, enabled: boolean) {
   const [value, setValue] = useState(0);

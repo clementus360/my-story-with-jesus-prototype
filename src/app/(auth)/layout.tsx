@@ -1,12 +1,12 @@
-const imgHero    = "http://localhost:3845/assets/7b144509c9cf1588679ecd840b037923759bbdd0.png";
-const imgLogo    = "http://localhost:3845/assets/f8d5e47573f3512eadbc708ea82da8c054f36f15.png";
-const imgLogoAlt = "http://localhost:3845/assets/1dadfaa94ab6e3472c340b8e6b5a3cc3378243e7.png";
+const imgHero    = "/assets/7b144509c9cf1588679ecd840b037923759bbdd0.png";
+const imgLogo    = "/assets/f8d5e47573f3512eadbc708ea82da8c054f36f15.png";
+const imgLogoAlt = "/assets/1dadfaa94ab6e3472c340b8e6b5a3cc3378243e7.png";
 
 const testimonialImages = [
-  "http://localhost:3845/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
-  "http://localhost:3845/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
-  "http://localhost:3845/assets/dfa16d3ee4100f15be507aca397fb2fa00c4ae5a.png",
-  "http://localhost:3845/assets/9497e14f739043d17dcb8d2a446f90d753187f07.png",
+  "/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
+  "/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
+  "/assets/dfa16d3ee4100f15be507aca397fb2fa00c4ae5a.png",
+  "/assets/9497e14f739043d17dcb8d2a446f90d753187f07.png",
 ];
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {

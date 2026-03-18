@@ -6,16 +6,16 @@ import { Search } from "lucide-react";
 import TestimonialMainCard from "@/components/TestimonialMainCard";
 
 const testimonialImages = [
-  "http://localhost:3845/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
-  "http://localhost:3845/assets/2bc32670cac098b01bfea288012634d320a6df70.png",
-  "http://localhost:3845/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
-  "http://localhost:3845/assets/8c2135d4cd7928a771e3325c2c15b656c2ba90f4.png",
-  "http://localhost:3845/assets/dfa16d3ee4100f15be507aca397fb2fa00c4ae5a.png",
-  "http://localhost:3845/assets/674c3930cb576a8d7f5898eea09eab4e14a08c1e.png",
-  "http://localhost:3845/assets/9497e14f739043d17dcb8d2a446f90d753187f07.png",
-  "http://localhost:3845/assets/b590e4583a18ec4b8da73564d8b0dd9985284e20.png",
-  "http://localhost:3845/assets/a26c75adbdb47ee4635814612ff657dfbd013ad0.png",
-  "http://localhost:3845/assets/0b99d64341d1de73aeae603e5e099c0ea1b82bb7.png",
+  "/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
+  "/assets/2bc32670cac098b01bfea288012634d320a6df70.png",
+  "/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
+  "/assets/8c2135d4cd7928a771e3325c2c15b656c2ba90f4.png",
+  "/assets/dfa16d3ee4100f15be507aca397fb2fa00c4ae5a.png",
+  "/assets/674c3930cb576a8d7f5898eea09eab4e14a08c1e.png",
+  "/assets/9497e14f739043d17dcb8d2a446f90d753187f07.png",
+  "/assets/b590e4583a18ec4b8da73564d8b0dd9985284e20.png",
+  "/assets/a26c75adbdb47ee4635814612ff657dfbd013ad0.png",
+  "/assets/0b99d64341d1de73aeae603e5e099c0ea1b82bb7.png",
 ];
 
 const tags = [

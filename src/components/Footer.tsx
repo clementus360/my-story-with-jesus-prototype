@@ -1,6 +1,6 @@
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
-const logoSrc = "http://localhost:3845/assets/1dadfaa94ab6e3472c340b8e6b5a3cc3378243e7.png";
+const logoSrc = "/assets/1dadfaa94ab6e3472c340b8e6b5a3cc3378243e7.png";
 
 const exploreLinks = ["Read Stories", "Featured Testimonies", "By Topic", "By Location"];
 const shareLinks = ["Share Your Story", "Create Account", "Guidelines"];

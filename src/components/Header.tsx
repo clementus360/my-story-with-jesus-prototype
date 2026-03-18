@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { BookOpen, LayoutDashboard, Settings, LogOut } from "lucide-react";
 
-const logoSrc = "http://localhost:3845/assets/f8d5e47573f3512eadbc708ea82da8c054f36f15.png";
+const logoSrc = "/assets/f8d5e47573f3512eadbc708ea82da8c054f36f15.png";
 
 const navLinks = [
   { label: "Home",       href: "/" },

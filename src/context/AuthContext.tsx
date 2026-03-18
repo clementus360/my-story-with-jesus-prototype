@@ -49,9 +49,9 @@ function makeInitials(name: string) {
 }
 
 const MOCK_AVATARS = [
-  "http://localhost:3845/assets/e0ed72f85793600186c470be8d093a1d975d0f98.png",
-  "http://localhost:3845/assets/377268403580342663fd510d39b202c00b515953.png",
-  "http://localhost:3845/assets/a2694540b0bbe13388ba733365eeb1f82df47250.png",
+  "/assets/e0ed72f85793600186c470be8d093a1d975d0f98.png",
+  "/assets/377268403580342663fd510d39b202c00b515953.png",
+  "/assets/a2694540b0bbe13388ba733365eeb1f82df47250.png",
 ];
 
 function mockDelay(ms = 900) {

@@ -1,4 +1,4 @@
-const imgHeroBg = "http://localhost:3845/assets/e980077697368521cb46b7e65da3158c5cc21f0e.png";
+const imgHeroBg = "/assets/e980077697368521cb46b7e65da3158c5cc21f0e.png";
 
 export default function AboutHero() {
   return (

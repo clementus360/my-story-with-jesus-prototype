@@ -1,9 +1,9 @@
 // Icons
-const imgIconWrite1  = "http://localhost:3845/assets/2e3dd0236754bc95afa704853bcb37abb90aea90.svg"; // create stroke
-const imgIconWrite2  = "http://localhost:3845/assets/d862a98ceb4e4c4173cd349e550930ae4c091077.svg"; // create vector
-const imgIconPublish = "http://localhost:3845/assets/9be5a2749a730971b324b7a710548cbdd3e1edb8.svg"; // upload/download stroke
-const imgIconQR      = "http://localhost:3845/assets/75dd3f0571c230842aafb27b707d33642b21d925.svg"; // QR
-const imgIconHeart   = "http://localhost:3845/assets/fc1d68ff713b706a400fbee42add2a92e8cf09cb.svg"; // heart
+const imgIconWrite1  = "/assets/2e3dd0236754bc95afa704853bcb37abb90aea90.svg"; // create stroke
+const imgIconWrite2  = "/assets/d862a98ceb4e4c4173cd349e550930ae4c091077.svg"; // create vector
+const imgIconPublish = "/assets/9be5a2749a730971b324b7a710548cbdd3e1edb8.svg"; // upload/download stroke
+const imgIconQR      = "/assets/75dd3f0571c230842aafb27b707d33642b21d925.svg"; // QR
+const imgIconHeart   = "/assets/fc1d68ff713b706a400fbee42add2a92e8cf09cb.svg"; // heart
 
 function WriteIcon() {
   return (

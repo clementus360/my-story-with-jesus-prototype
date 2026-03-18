@@ -14,14 +14,14 @@ import { ALL_TAGS, ALL_COUNTRIES } from "@/data/testimonials";
 // ─── Cover photos (reusing existing assets) ───────────────────────────────────
 
 const COVER_PHOTOS = [
-  "http://localhost:3845/assets/7b144509c9cf1588679ecd840b037923759bbdd0.png",
-  "http://localhost:3845/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
-  "http://localhost:3845/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
-  "http://localhost:3845/assets/dfa16d3ee4100f15be507aca397fb2fa00c4ae5a.png",
-  "http://localhost:3845/assets/9497e14f739043d17dcb8d2a446f90d753187f07.png",
-  "http://localhost:3845/assets/b590e4583a18ec4b8da73564d8b0dd9985284e20.png",
-  "http://localhost:3845/assets/a26c75adbdb47ee4635814612ff657dfbd013ad0.png",
-  "http://localhost:3845/assets/0b99d64341d1de73aeae603e5e099c0ea1b82bb7.png",
+  "/assets/7b144509c9cf1588679ecd840b037923759bbdd0.png",
+  "/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
+  "/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
+  "/assets/dfa16d3ee4100f15be507aca397fb2fa00c4ae5a.png",
+  "/assets/9497e14f739043d17dcb8d2a446f90d753187f07.png",
+  "/assets/b590e4583a18ec4b8da73564d8b0dd9985284e20.png",
+  "/assets/a26c75adbdb47ee4635814612ff657dfbd013ad0.png",
+  "/assets/0b99d64341d1de73aeae603e5e099c0ea1b82bb7.png",
 ];
 
 // ─── Category config ──────────────────────────────────────────────────────────
@@ -194,7 +194,18 @@ export default function ShareStoryForm() {
   }
 
   function handleCopyLink() {
-    navigator.clipboard.writeText(`${window.location.origin}/story/${encodeURIComponent(data.title.toLowerCase().replace(/\s+/g, "-"))}`);
+    const url = `${window.location.origin}/story/${encodeURIComponent(data.title.toLowerCase().replace(/\s+/g, "-"))}`;
+    try {
+      const el = document.createElement("textarea");
+      el.value = url;
+      el.style.cssText = "position:absolute;left:-9999px;top:-9999px";
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+    } catch {
+      // silent fail
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }

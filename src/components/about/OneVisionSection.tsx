@@ -1,11 +1,11 @@
 // Map + icon assets
-const imgWorldMap   = "http://localhost:3845/assets/3e76db26597ea9b865099fb9804673e56f7fe209.png";
-const imgIconPin1   = "http://localhost:3845/assets/3c0fa342d0bd3a312ff19d6350ef419b705c7e35.svg"; // map pin stroke 1
-const imgIconPin2   = "http://localhost:3845/assets/e0172f6e4d78dafcac84ccb32f9cd3fe200d77a9.svg"; // map pin stroke 2
-const imgIconPin3   = "http://localhost:3845/assets/030278bd8c477efe762730b54d7bc1273341f1f5.svg"; // map pin stroke 3
-const imgIconCopy1  = "http://localhost:3845/assets/fa99156067c48aeb6ec7e6df533093aff0a06892.svg"; // copy icon stroke 1
-const imgIconCopy2  = "http://localhost:3845/assets/0fe2c3ad564f70ab28195f6fc80b8060e4178d48.svg"; // copy icon stroke 2
-const imgIconLocate = "http://localhost:3845/assets/8a4facaf0ade05a44230a4fb07e584c4f91e6f17.svg"; // locate icon
+const imgWorldMap   = "/assets/3e76db26597ea9b865099fb9804673e56f7fe209.png";
+const imgIconPin1   = "/assets/3c0fa342d0bd3a312ff19d6350ef419b705c7e35.svg"; // map pin stroke 1
+const imgIconPin2   = "/assets/e0172f6e4d78dafcac84ccb32f9cd3fe200d77a9.svg"; // map pin stroke 2
+const imgIconPin3   = "/assets/030278bd8c477efe762730b54d7bc1273341f1f5.svg"; // map pin stroke 3
+const imgIconCopy1  = "/assets/fa99156067c48aeb6ec7e6df533093aff0a06892.svg"; // copy icon stroke 1
+const imgIconCopy2  = "/assets/0fe2c3ad564f70ab28195f6fc80b8060e4178d48.svg"; // copy icon stroke 2
+const imgIconLocate = "/assets/8a4facaf0ade05a44230a4fb07e584c4f91e6f17.svg"; // locate icon
 
 function MapPinIcon() {
   return (

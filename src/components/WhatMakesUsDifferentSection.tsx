@@ -3,8 +3,8 @@
 import { Video, ImageIcon, FileText, Sparkles, BarChart2, QrCode } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 
-const imgGlobalReach = "http://localhost:3845/assets/2c8af520db8b2da2b9bf74c429690d48178e41c0.png";
-const imgMultimedia = "http://localhost:3845/assets/a57ab92c0455773f14ef972f47154c38a03a8216.png";
+const imgGlobalReach = "/assets/2c8af520db8b2da2b9bf74c429690d48178e41c0.png";
+const imgMultimedia = "/assets/a57ab92c0455773f14ef972f47154c38a03a8216.png";
 
 const languages = ["EN", "ES", "FR", "PT", "ZH"];
 
