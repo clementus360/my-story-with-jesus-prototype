@@ -1,8 +1,9 @@
 "use client";
 
-const imgMainHero = "http://localhost:3845/assets/7b144509c9cf1588679ecd840b037923759bbdd0.png";
-const imgAvatar = "http://localhost:3845/assets/e0ed72f85793600186c470be8d093a1d975d0f98.png";
-const imgSearchIcon = "http://localhost:3845/assets/2843b9a4277a57fd79701c736ab2ad92a47cca52.svg";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Search } from "lucide-react";
+import TestimonialMainCard from "@/components/TestimonialMainCard";
 
 const testimonialImages = [
   "http://localhost:3845/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
@@ -18,11 +19,11 @@ const testimonialImages = [
 ];
 
 const tags = [
-  "#Healing",
-  "#Financial Transformation",
-  "#Free From Addiction",
-  "#Faith",
-  "#What Happened to Me",
+  "Healing",
+  "Freedom from Addiction",
+  "Depression",
+  "Family",
+  "Faith & Repentance",
 ];
 
 const userJourney = [
@@ -45,9 +46,10 @@ const userJourney = [
 
 function TestimonialCard({ src }: { src: string }) {
   return (
-    <div className="rounded-2xl overflow-hidden shrink-0 w-[139px] h-[200px] relative">
-      <img alt="Testimony" className="absolute inset-0 w-full h-full object-cover" src={src} />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+    <div className="rounded-2xl overflow-hidden shrink-0 w-[139px] h-[200px] relative shadow-[0px_6px_24px_0px_rgba(0,0,0,0.05)]">
+      <img alt="Testimony" className="absolute inset-0 w-full h-full object-cover rounded-2xl" src={src} />
+      <div className="absolute inset-0 rounded-2xl bg-[#404040] mix-blend-color" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-transparent to-black/60" />
     </div>
   );
 }
@@ -75,10 +77,25 @@ function SlidingColumn({
 }
 
 export default function HeroSection() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
   const col1 = testimonialImages.slice(0, 5);
   const col2 = testimonialImages.slice(5, 10);
   const col3 = testimonialImages.slice(0, 6);
   const col4 = testimonialImages.slice(4, 10);
+
+  function handleSearch() {
+    if (query.trim()) {
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+    } else {
+      router.push("/search");
+    }
+  }
+
+  function handleTagClick(tag: string) {
+    router.push(`/search?tags=${encodeURIComponent(tag)}`);
+  }
 
   return (
     <section className="w-full px-8 pt-0 pb-10">
@@ -91,26 +108,35 @@ export default function HeroSection() {
 
         {/* Search */}
         <div className="relative w-full mb-4">
-          <div className="flex items-center bg-white border border-[#e0e0e0] rounded-full px-5 py-3 gap-3 shadow-sm">
-            <img alt="Search" className="w-5 h-5 shrink-0" src={imgSearchIcon} />
+          <div className="flex items-center bg-white border border-[#e0e0e0] rounded-full px-5 py-3 gap-3 shadow-sm focus-within:border-[#3949ab] transition-colors">
+            <Search size={18} className="text-[#858585] shrink-0" />
             <input
               type="text"
-              placeholder="Search for a testimony..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+              placeholder="Search stories by topic, name, country or testimony..."
               className="flex-1 text-base text-[#666] outline-none bg-transparent placeholder:text-[#aaa]"
             />
+            <button
+              onClick={handleSearch}
+              className="bg-[#3949ab] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-[#003299] transition-colors whitespace-nowrap shrink-0"
+            >
+              Search
+            </button>
           </div>
         </div>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 justify-center">
           {tags.map((tag) => (
-            <a
+            <button
               key={tag}
-              href="#"
+              onClick={() => handleTagClick(tag)}
               className="border border-[#3949ab] text-[#3949ab] text-sm px-5 py-2 rounded-full hover:bg-[#3949ab] hover:text-white transition-colors"
             >
-              {tag}
-            </a>
+              #{tag}
+            </button>
           ))}
         </div>
       </div>
@@ -124,43 +150,7 @@ export default function HeroSection() {
         </div>
 
         {/* Main testimonial card */}
-        <div className="shrink-0 w-[720px] h-[640px] rounded-2xl overflow-hidden relative">
-          <img
-            alt="Featured testimony"
-            className="absolute inset-0 w-full h-full object-cover"
-            src={imgMainHero}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-          {/* Card overlay content */}
-          <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-            <div className="flex items-center gap-3 mb-3">
-              <img
-                alt="Jane D."
-                className="w-10 h-10 rounded-full object-cover border-2 border-white"
-                src={imgAvatar}
-              />
-              <div>
-                <p className="font-semibold text-sm">Jane D.</p>
-                <p className="text-xs text-white/70">Chicago, IL</p>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold leading-snug mb-2">
-              How Jesus Transformed My Life
-            </h3>
-            <p className="text-sm text-white/80 line-clamp-2">
-              I never imagined my life could change so drastically. Through faith and prayer,
-              everything transformed...
-            </p>
-            <div className="flex gap-3 mt-4">
-              <button className="bg-white text-[#3949ab] text-sm font-medium px-5 py-2 rounded-full hover:bg-[#f5f5f5] transition-colors">
-                Read Story
-              </button>
-              <button className="border border-white text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-white/10 transition-colors">
-                Share
-              </button>
-            </div>
-          </div>
-        </div>
+        <TestimonialMainCard />
 
         {/* Right sliding panel */}
         <div className="flex gap-3 shrink-0">

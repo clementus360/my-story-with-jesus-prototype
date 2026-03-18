@@ -1,0 +1,267 @@
+export type Testimonial = {
+  id: string;
+  name: string;
+  avatar: string;
+  photo: string;
+  location: string;
+  country: string;
+  title: string;
+  excerpt: string;
+  tags: string[];
+  category: string;
+  date: string;
+  readTime: number; // minutes
+  views: number;
+  likes: number;
+};
+
+export const ALL_TAGS = [
+  "Healing",
+  "Freedom from Addiction",
+  "Depression",
+  "Family",
+  "Faith & Repentance",
+  "Salvation",
+  "Financial Breakthrough",
+  "Purpose",
+  "Miracle",
+  "Prayer",
+  "Transformation",
+  "Hope",
+  "Grace",
+  "New Life",
+  "Mental Health",
+  "Addiction Recovery",
+];
+
+export const ALL_CATEGORIES = [
+  "Healing",
+  "Salvation",
+  "Financial Breakthrough",
+  "Freedom from Addiction",
+  "Mental Health",
+  "Family Restoration",
+  "Purpose & Calling",
+  "Miraculous Encounter",
+  "Faith Journey",
+];
+
+export const ALL_COUNTRIES = [
+  "USA",
+  "Kenya",
+  "Brazil",
+  "UK",
+  "Nigeria",
+  "South Africa",
+  "India",
+  "Australia",
+  "Germany",
+  "Philippines",
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "1",
+    name: "Jane Doe",
+    avatar: "http://localhost:3845/assets/e0ed72f85793600186c470be8d093a1d975d0f98.png",
+    photo: "http://localhost:3845/assets/7b144509c9cf1588679ecd840b037923759bbdd0.png",
+    location: "LA, USA",
+    country: "USA",
+    title: "From Chronic Illness to Complete Restoration",
+    excerpt:
+      "For three years I battled a condition doctors said was permanent. Through persistent prayer and the love of my church community, I witnessed God's miraculous healing power transform my life completely.",
+    tags: ["Healing", "Faith & Repentance", "Miracle", "Prayer"],
+    category: "Healing",
+    date: "2025-11-15",
+    readTime: 6,
+    views: 4821,
+    likes: 312,
+  },
+  {
+    id: "2",
+    name: "Daniel K.",
+    avatar: "http://localhost:3845/assets/2bc32670cac098b01bfea288012634d320a6df70.png",
+    photo: "http://localhost:3845/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
+    location: "Nairobi, Kenya",
+    country: "Kenya",
+    title: "A New Identity — How Jesus Gave Me Purpose",
+    excerpt:
+      "Growing up without a father, I searched for identity in all the wrong places. The moment I surrendered to Jesus, everything changed. He gave me a name, a purpose, and a family I never had.",
+    tags: ["Salvation", "Purpose", "Hope", "New Life"],
+    category: "Salvation",
+    date: "2025-10-02",
+    readTime: 8,
+    views: 3210,
+    likes: 247,
+  },
+  {
+    id: "3",
+    name: "Maria S.",
+    avatar: "http://localhost:3845/assets/8c2135d4cd7928a771e3325c2c15b656c2ba90f4.png",
+    photo: "http://localhost:3845/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
+    location: "São Paulo, Brazil",
+    country: "Brazil",
+    title: "God Turned Our Debt Into Abundance",
+    excerpt:
+      "My husband and I were drowning in debt. We lost our home and had nothing left. In our darkest hour we cried out to God, and through a series of impossible doors opening, He restored everything we lost and more.",
+    tags: ["Financial Breakthrough", "Prayer", "Miracle", "Transformation"],
+    category: "Financial Breakthrough",
+    date: "2025-09-18",
+    readTime: 7,
+    views: 5940,
+    likes: 481,
+  },
+  {
+    id: "4",
+    name: "Liam T.",
+    avatar: "http://localhost:3845/assets/674c3930cb576a8d7f5898eea09eab4e14a08c1e.png",
+    photo: "http://localhost:3845/assets/dfa16d3ee4100f15be507aca397fb2fa00c4ae5a.png",
+    location: "London, UK",
+    country: "UK",
+    title: "Ten Years of Addiction Ended in One Night",
+    excerpt:
+      "I had tried rehab four times and failed every time. One night, alone in a shelter, I prayed for the first time in years. The craving left me that night and has never returned. It has been three years of complete freedom.",
+    tags: ["Freedom from Addiction", "Addiction Recovery", "Grace", "New Life"],
+    category: "Freedom from Addiction",
+    date: "2025-08-30",
+    readTime: 9,
+    views: 7302,
+    likes: 634,
+  },
+  {
+    id: "5",
+    name: "Amara N.",
+    avatar: "http://localhost:3845/assets/a2694540b0bbe13388ba733365eeb1f82df47250.png",
+    photo: "http://localhost:3845/assets/b590e4583a18ec4b8da73564d8b0dd9985284e20.png",
+    location: "Lagos, Nigeria",
+    country: "Nigeria",
+    title: "Restored After Years of Broken Family",
+    excerpt:
+      "My family was torn apart by anger, unforgiveness and years of silence. When I gave my life to Christ, He began healing wounds I thought were permanent. Today my parents speak to each other again.",
+    tags: ["Family", "Transformation", "Prayer", "Hope"],
+    category: "Family Restoration",
+    date: "2025-07-12",
+    readTime: 5,
+    views: 2890,
+    likes: 198,
+  },
+  {
+    id: "6",
+    name: "Sophie M.",
+    avatar: "http://localhost:3845/assets/377268403580342663fd510d39b202c00b515953.png",
+    photo: "http://localhost:3845/assets/9497e14f739043d17dcb8d2a446f90d753187f07.png",
+    location: "Melbourne, Australia",
+    country: "Australia",
+    title: "Anxiety and Depression No More",
+    excerpt:
+      "For six years I could barely leave my house. Doctors prescribed medication after medication with no real relief. Through a friend's invitation to church, I found a peace that no medication could ever give.",
+    tags: ["Mental Health", "Depression", "Healing", "Faith & Repentance"],
+    category: "Mental Health",
+    date: "2025-06-25",
+    readTime: 6,
+    views: 6110,
+    likes: 528,
+  },
+  {
+    id: "7",
+    name: "Emmanuel O.",
+    avatar: "http://localhost:3845/assets/e0ed72f85793600186c470be8d093a1d975d0f98.png",
+    photo: "http://localhost:3845/assets/a26c75adbdb47ee4635814612ff657dfbd013ad0.png",
+    location: "Johannesburg, South Africa",
+    country: "South Africa",
+    title: "Called to Preach at the Worst Moment of My Life",
+    excerpt:
+      "I had just lost my job and my wife had left me. In that emptiness I felt God call me to ministry. I said yes with nothing in my hands — and He has provided every single step since.",
+    tags: ["Purpose", "Salvation", "Faith & Repentance", "Hope"],
+    category: "Purpose & Calling",
+    date: "2025-05-08",
+    readTime: 10,
+    views: 3455,
+    likes: 290,
+  },
+  {
+    id: "8",
+    name: "Priya R.",
+    avatar: "http://localhost:3845/assets/2bc32670cac098b01bfea288012634d320a6df70.png",
+    photo: "http://localhost:3845/assets/0b99d64341d1de73aeae603e5e099c0ea1b82bb7.png",
+    location: "Chennai, India",
+    country: "India",
+    title: "The Dream That Changed Everything",
+    excerpt:
+      "I was raised in a devout Hindu family and had never read the Bible. Then Jesus appeared to me in a dream and called me by name. What followed was the most dramatic transformation I could have imagined.",
+    tags: ["Salvation", "Miraculous Encounter", "Miracle", "New Life"],
+    category: "Miraculous Encounter",
+    date: "2025-04-14",
+    readTime: 11,
+    views: 9812,
+    likes: 876,
+  },
+  {
+    id: "9",
+    name: "Thomas H.",
+    avatar: "http://localhost:3845/assets/674c3930cb576a8d7f5898eea09eab4e14a08c1e.png",
+    photo: "http://localhost:3845/assets/2bc32670cac098b01bfea288012634d320a6df70.png",
+    location: "Berlin, Germany",
+    country: "Germany",
+    title: "From Atheism to Absolute Conviction",
+    excerpt:
+      "I spent twenty years arguing that God did not exist. A near-death experience and the unexplained kindness of strangers dismantled every argument I had. I walked into a church for the first time at age 42.",
+    tags: ["Faith & Repentance", "Salvation", "Transformation"],
+    category: "Faith Journey",
+    date: "2025-03-22",
+    readTime: 8,
+    views: 4200,
+    likes: 360,
+  },
+  {
+    id: "10",
+    name: "Grace A.",
+    avatar: "http://localhost:3845/assets/8c2135d4cd7928a771e3325c2c15b656c2ba90f4.png",
+    photo: "http://localhost:3845/assets/8c2135d4cd7928a771e3325c2c15b656c2ba90f4.png",
+    location: "Accra, Ghana",
+    country: "Nigeria",
+    title: "Healed of a Rare Blood Condition",
+    excerpt:
+      "The doctors had prepared me for the worst. My family was praying around my hospital bed when something shifted in the room. Every test afterward came back clear. The doctors called it inexplicable.",
+    tags: ["Healing", "Miracle", "Prayer", "Family"],
+    category: "Healing",
+    date: "2025-02-10",
+    readTime: 5,
+    views: 5100,
+    likes: 420,
+  },
+  {
+    id: "11",
+    name: "Carlos V.",
+    avatar: "http://localhost:3845/assets/a2694540b0bbe13388ba733365eeb1f82df47250.png",
+    photo: "http://localhost:3845/assets/04189945b9f91e27a439d4c4b3825ffeb1a4f1bb.png",
+    location: "Manila, Philippines",
+    country: "Philippines",
+    title: "Jesus Broke the Chains of Gambling",
+    excerpt:
+      "I had lost everything to gambling — my savings, my marriage, and almost my life. A pastor visited me in jail and introduced me to Jesus. That encounter broke a 15-year addiction overnight.",
+    tags: ["Freedom from Addiction", "Grace", "New Life", "Family"],
+    category: "Freedom from Addiction",
+    date: "2025-01-05",
+    readTime: 7,
+    views: 4680,
+    likes: 395,
+  },
+  {
+    id: "12",
+    name: "Rachel B.",
+    avatar: "http://localhost:3845/assets/377268403580342663fd510d39b202c00b515953.png",
+    photo: "http://localhost:3845/assets/1a62366225817c187f92eeee1bc130ed5441bd06.png",
+    location: "Atlanta, USA",
+    country: "USA",
+    title: "Finding Joy After a Season of Grief",
+    excerpt:
+      "After losing my mother and my baby within the same year, I hit rock bottom. In my grief I stumbled into a small Bible study. The community and the Word of God carried me back to life.",
+    tags: ["Hope", "Healing", "Depression", "Mental Health"],
+    category: "Mental Health",
+    date: "2024-12-20",
+    readTime: 6,
+    views: 3740,
+    likes: 302,
+  },
+];
