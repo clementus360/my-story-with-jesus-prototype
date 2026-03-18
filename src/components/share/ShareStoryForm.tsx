@@ -9,6 +9,7 @@ import {
   Compass, Zap, BookOpen, Check, ArrowRight, ArrowLeft,
   Copy, CheckCircle, Eye, Heart as HeartIcon,
 } from "lucide-react";
+import Image from "next/image";
 import { ALL_TAGS, ALL_COUNTRIES } from "@/data/testimonials";
 
 // ─── Cover photos (reusing existing assets) ───────────────────────────────────
@@ -106,7 +107,7 @@ function PreviewCard({ data }: { data: FormData }) {
     <div className="bg-white rounded-2xl border border-[#ebebeb] overflow-hidden w-full max-w-[300px]">
       <div className="relative h-36 overflow-hidden bg-[#f5f5f5]">
         {data.coverPhoto && (
-          <img src={data.coverPhoto} alt="" className="w-full h-full object-cover" />
+          <Image src={data.coverPhoto} alt="" fill sizes="300px" className="object-cover" />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         {data.category && (
@@ -405,7 +406,7 @@ export default function ShareStoryForm() {
                     className="relative rounded-xl overflow-hidden aspect-[3/4] group"
                     style={{ boxShadow: selected ? "0 0 0 2px #3949ab" : undefined }}
                   >
-                    <img src={src} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" />
+                    <Image src={src} alt="" fill sizes="150px" className="object-cover group-hover:scale-105 transition-transform duration-200" />
                     {selected && (
                       <div className="absolute inset-0 bg-[#3949ab]/30 flex items-center justify-center">
                         <div className="w-6 h-6 rounded-full bg-[#3949ab] flex items-center justify-center">

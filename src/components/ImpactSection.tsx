@@ -1,6 +1,7 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
 
@@ -130,10 +131,12 @@ export default function ImpactSection() {
         }`}
         style={{ transitionDelay: "100ms" }}
       >
-        <img
-          alt="Community of believers"
-          className="absolute inset-0 w-full h-full object-cover"
+        <Image
           src={imgGroupPhoto}
+          alt="Community of believers"
+          fill
+          sizes="50vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
       </div>

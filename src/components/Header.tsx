@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
@@ -98,7 +99,7 @@ export default function Header() {
       {/* Logo */}
       <div className="h-[53px] w-[300px] relative shrink-0">
         <Link href="/">
-          <img alt="My Story With Jesus" className="h-full w-auto object-contain" src={logoSrc} />
+          <Image src={logoSrc} alt="My Story With Jesus" width={300} height={53} className="h-full w-auto object-contain" priority />
         </Link>
       </div>
 

@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import Image from "next/image";
 
 const logoSrc = "/assets/1dadfaa94ab6e3472c340b8e6b5a3cc3378243e7.png";
 
@@ -18,7 +19,7 @@ export default function Footer() {
       <div className="grid grid-cols-4 gap-12 pb-12">
         {/* Brand */}
         <div className="flex flex-col gap-4">
-          <img alt="My Story With Jesus" className="h-10 w-auto object-contain" src={logoSrc} />
+          <Image src={logoSrc} alt="My Story With Jesus" width={200} height={40} className="h-10 w-auto object-contain" />
           <p className="text-white/80 text-base leading-5 w-[224px]">
             Real people. Real stories. A real Jesus.
           </p>

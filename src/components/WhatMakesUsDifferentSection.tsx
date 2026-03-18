@@ -1,6 +1,7 @@
 "use client";
 
 import { Video, ImageIcon, FileText, Sparkles, BarChart2, QrCode } from "lucide-react";
+import Image from "next/image";
 import { useInView } from "@/hooks/useInView";
 
 const imgGlobalReach = "/assets/2c8af520db8b2da2b9bf74c429690d48178e41c0.png";
@@ -67,7 +68,7 @@ export default function WhatMakesUsDifferentSection() {
             style={{ transitionDelay: "100ms" }}
           >
             <div className="absolute inset-0">
-              <img alt="Global reach" className="w-full h-full object-cover" src={imgGlobalReach} />
+              <Image src={imgGlobalReach} alt="Global reach" fill sizes="(max-width: 1440px) 66vw, 900px" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80" />
             </div>
             <div className="relative z-10 max-w-[400px]">
@@ -99,7 +100,7 @@ export default function WhatMakesUsDifferentSection() {
             style={{ transitionDelay: "200ms" }}
           >
             <div className="absolute inset-0 opacity-20 overflow-hidden rounded-2xl">
-              <img alt="" className="w-full h-full object-cover" src={imgMultimedia} />
+              <Image src={imgMultimedia} alt="" fill sizes="400px" className="object-cover" />
             </div>
             <div className="relative z-10">
               <h3 className="text-white text-2xl font-medium mb-3">Multimedia Testimonies</h3>

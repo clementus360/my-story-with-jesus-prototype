@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const imgHero    = "/assets/7b144509c9cf1588679ecd840b037923759bbdd0.png";
 const imgLogo    = "/assets/f8d5e47573f3512eadbc708ea82da8c054f36f15.png";
 const imgLogoAlt = "/assets/1dadfaa94ab6e3472c340b8e6b5a3cc3378243e7.png";
@@ -15,17 +17,20 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       {/* ── Left panel: branding ── */}
       <div className="hidden lg:flex lg:w-[45%] relative flex-col justify-between p-12 overflow-hidden">
         {/* Hero photo */}
-        <img
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+        <Image
           src={imgHero}
+          alt=""
+          fill
+          sizes="45vw"
+          className="object-cover"
+          priority
         />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-[#00194c]/80" />
 
         {/* Top: logo */}
         <div className="relative z-10">
-          <img alt="My Story With Jesus" className="h-10 w-auto object-contain object-left" src={imgLogoAlt} />
+          <Image src={imgLogoAlt} alt="My Story With Jesus" width={160} height={40} className="h-10 w-auto object-contain object-left" />
         </div>
 
         {/* Middle: headline */}
@@ -44,10 +49,10 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             {testimonialImages.map((src, i) => (
               <div
                 key={i}
-                className="w-14 h-14 rounded-full overflow-hidden border-2 border-white/60 shrink-0"
+                className="w-14 h-14 rounded-full overflow-hidden border-2 border-white/60 shrink-0 relative"
                 style={{ marginLeft: i > 0 ? -16 : 0 }}
               >
-                <img alt="" className="w-full h-full object-cover" src={src} />
+                <Image src={src} alt="" fill sizes="56px" className="object-cover" />
               </div>
             ))}
             <div className="w-14 h-14 rounded-full bg-[#3949ab] border-2 border-white/60 flex items-center justify-center shrink-0 -ml-4">
@@ -68,7 +73,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       <div className="flex-1 flex flex-col items-center justify-center bg-[#f5f5f5] px-6 py-12 min-h-screen">
         {/* Mobile logo */}
         <div className="lg:hidden mb-8">
-          <img alt="My Story With Jesus" className="h-10 w-auto object-contain" src={imgLogo} />
+          <Image src={imgLogo} alt="My Story With Jesus" width={160} height={40} className="h-10 w-auto object-contain" />
         </div>
 
         <div className="w-full max-w-[440px]">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 // ─── Assets ────────────────────────────────────────────────────────────────
 const imgStars        = "/assets/4469bf716aabf3f6e95fb1deac60219ceedfc20d.svg";
@@ -113,11 +114,14 @@ export default function TestimonialMainCard() {
 
       {/* Background photo + gradient */}
       <div className="absolute inset-0 pointer-events-none rounded-2xl">
-        <img
+        <Image
           key={t.photo}
-          alt="Testimony background"
-          className="absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-500"
           src={t.photo}
+          alt="Testimony background"
+          fill
+          sizes="720px"
+          className="object-cover rounded-2xl transition-opacity duration-500"
+          priority
         />
         {/* Figma gradient: from-transparent (at 54.9%) to black/50 */}
         <div className="absolute inset-0 rounded-2xl"
@@ -129,7 +133,7 @@ export default function TestimonialMainCard() {
       <div className="relative flex items-center justify-between w-full z-10">
         {/* 5-star rating SVG */}
         <div className="w-[160px] h-6 shrink-0">
-          <img alt="5 stars" className="w-full h-full object-contain object-left" src={imgStars} />
+          <Image src={imgStars} alt="5 stars" width={160} height={24} className="object-contain object-left" />
         </div>
 
         {/* Share + Read Story */}
@@ -171,11 +175,13 @@ export default function TestimonialMainCard() {
         <div className="flex items-center justify-between w-full">
           {/* Avatar + name + location */}
           <div className="flex items-center gap-3">
-            <img
+            <Image
               key={t.avatar}
-              alt={t.name}
-              className="w-16 h-16 rounded-full object-cover shrink-0"
               src={t.avatar}
+              alt={t.name}
+              width={64}
+              height={64}
+              className="rounded-full object-cover shrink-0"
             />
             <div className="flex flex-col">
               <span className="text-white text-xl font-bold leading-7 whitespace-nowrap">{t.name}</span>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import TestimonialMainCard from "@/components/TestimonialMainCard";
 
 const testimonialImages = [
@@ -47,7 +48,7 @@ const userJourney = [
 function TestimonialCard({ src }: { src: string }) {
   return (
     <div className="rounded-2xl overflow-hidden shrink-0 w-[139px] h-[200px] relative shadow-[0px_6px_24px_0px_rgba(0,0,0,0.05)]">
-      <img alt="Testimony" className="absolute inset-0 w-full h-full object-cover rounded-2xl" src={src} />
+      <Image src={src} alt="Testimony" fill sizes="139px" className="object-cover rounded-2xl" priority />
       <div className="absolute inset-0 rounded-2xl bg-[#404040] mix-blend-color" />
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-transparent to-black/60" />
     </div>
